@@ -1,6 +1,14 @@
 # WeatherCheck
 
+
 WeatherCheck é uma aplicação frontend desenvolvida com Angular 21 para consulta de condições climáticas em tempo real a partir da API do OpenWeather em formato de card.
+
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/642f5d73-50e5-4d27-942f-7487ce9ec1e0"
+    width="400"
+  />
+</p>
 
 O objetivo do projeto é demonstrar boas práticas de arquitetura no Angular moderno, uso de Signals, tipagem com TypeScript e organização de componentes.
 
