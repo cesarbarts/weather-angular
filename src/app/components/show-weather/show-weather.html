@@ -1,0 +1,10 @@
+<div class="d-flex gap-3 m-3">
+    <input class="form-control" placeholder="Pesquise aqui um local" type="text" [(ngModel)]="newCity">
+
+<button type="submit" (click)="getWeather(newCity())" class="btn btn-success">Procurar</button>
+
+</div>
+
+<div class="d-flex justify-content-center">
+    <app-show-weather-card [info]="weatherInfo()!"></app-show-weather-card>
+</div>

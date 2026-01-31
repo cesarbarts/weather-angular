@@ -1,0 +1,46 @@
+@if (info()) {
+<div class="card" style="width: 18rem;">
+    <img src="{{info().main.temp > 10 ? 'calor.jpg' : 'frio.jpg'}}" class="card-img-top" height="200">
+    <div class="card-body">
+        <h5 class="card-title">
+            {{info().main.temp | number: '0.0-0' }}ºC</h5>
+        <p class="card-text">{{info().name}}</p>
+
+        <div class="d-flex gap-3 flex-column">
+            <div class="d-flex flex-row justify-content-between mx-1">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex flex-column text-center">
+                        <fa-icon [icon]="faTemperatureLow"></fa-icon>
+                        <small>Mín</small>
+                    </div>
+                    <span>{{info().main.temp_min | number: '0.0-0'}}º</span>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex flex-column text-center">
+                        <fa-icon [icon]="faTemperatureHigh"></fa-icon>
+                        <small>Máx</small>
+                    </div>
+                    <span>{{info().main.temp_max | number: '0.0-0'}}º</span>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-between mx-1">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex flex-column text-center">
+                        <fa-icon [icon]="faWater"></fa-icon>
+                        <small>Umd</small>
+                    </div>
+                    <span>{{info().main.humidity}}%</span>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex flex-column text-center">
+                        <fa-icon [icon]="faWind"></fa-icon>
+                        <small>Vento</small>
+                    </div>
+                    <span>{{info().wind.speed}}<br><small>km/h</small></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+}
