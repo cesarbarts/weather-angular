@@ -5,11 +5,15 @@
             aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-collapse collapse" id="navbarColor01" style="">
+        <div class="navbar-collapse collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
-                <app-navbar-item route="home" label="Home"></app-navbar-item>
+                <app-navbar-item route="weather" label="WeatherCheck"></app-navbar-item>
                 <app-navbar-item route="about" label="Sobre"></app-navbar-item>
+
             </ul>
+            @if (!(profile()?.given_name == null)) {
+            <span class="nav-item text-light"><span class="nav-link" (click)="logout()">Logout</span></span>
+            }
         </div>
     </div>
 </nav>

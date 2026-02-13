@@ -1,0 +1,8 @@
+
+@if (profile()?.given_name == null) {
+
+<a class="btn btn-primary" (click)="makeLogin()">Fazer Login com Google</a>
+} @else {
+
+Você está autenticado!
+}

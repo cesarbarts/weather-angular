@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, signal } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit, signal } from '@angular/core';
 import { WeatherService } from '../../services/weather.service';
 import { Weather } from '../../models/Weather';
 import { Subject, takeUntil } from 'rxjs';
@@ -37,4 +37,6 @@ export class ShowWeather implements OnInit, OnDestroy {
     this.destroy$.next();
     this.destroy$.complete();
   }
+
+  
 }

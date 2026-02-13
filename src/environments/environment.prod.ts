@@ -1,4 +1,4 @@
 export const environment = {
-    production: true,
-    apiKey: 'SUA_CHAVE_API'
-}
+  production: true,
+  apiKey: 'SUA_CHAVE_API',
+};
